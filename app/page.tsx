@@ -1,7 +1,7 @@
-import AcmeLogo from '@/app/ui/acme-logo';
+import AcmeLogo from '@/app/_ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { lusitana } from '@/app/ui/fonts';
+import { lusitana } from '@/app/_ui/fonts';
 import Image from 'next/image';
 
 export default function Page() {
@@ -33,6 +33,7 @@ export default function Page() {
             width={1000}
             height={760}
             className="hidden md:block"
+            loading="eager"
           />
           <Image
             src="/hero-mobile.png"
@@ -40,6 +41,7 @@ export default function Page() {
             width={560}
             height={620}
             className="block md:hidden"
+            loading="eager"
           />
         </div>
       </div>
