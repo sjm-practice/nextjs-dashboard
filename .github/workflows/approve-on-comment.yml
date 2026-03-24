@@ -2,7 +2,7 @@ name: Approve PR by comment
 
 on:
   issue_comment:
-    types: [created]   # only when a new comment is added
+    types: [created] # only when a new comment is added
 
 permissions:
   pull-requests: write

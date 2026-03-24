@@ -1,12 +1,6 @@
 {
-  "cSpell.words": [
-    "ILIKE",
-    "ossp"
-  ],
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ]
+  "cSpell.words": ["ILIKE", "ossp"],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
