@@ -8,12 +8,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev       # Development server with Turbopack
 pnpm build     # Production build
 pnpm start     # Production server
+pnpm lint      # ESLint (eslint-config-next / core-web-vitals)
 
 # Database seeding (run once after setting up env vars)
 # GET /api/seed — creates tables and inserts placeholder data
 ```
 
-No lint or test commands are currently configured.
+No test commands are currently configured.
 
 ## Architecture
 
