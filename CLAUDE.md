@@ -42,6 +42,7 @@ Interactive UI (search, pagination) uses `'use client'` with `useRouter`/`useSea
 ### Environment variables
 
 Required in `.env.local`:
+
 ```
 POSTGRES_URL          # Neon pooled connection string
 AUTH_SECRET           # next-auth secret (generate with: npx auth secret)

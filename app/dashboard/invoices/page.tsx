@@ -5,8 +5,8 @@ import { CreateInvoice } from '@/app/_ui/invoices/buttons';
 import { lusitana } from '@/app/_ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/_ui/skeletons';
 import { Suspense } from 'react';
-import { fetchInvoicesPages } from "@/app/_lib/data";
- 
+import { fetchInvoicesPages } from '@/app/_lib/data';
+
 export default async function Page(props: {
   searchParams?: Promise<{
     query?: string;
@@ -30,7 +30,11 @@ export default async function Page(props: {
           in development of this tutorial. Perhaps a change later in the tutorial addresses
           this issue.
         */}
-        <Suspense fallback={ <div className="h-10 w-full max-w-sm rounded-md bg-gray-100" /> } >
+        <Suspense
+          fallback={
+            <div className="h-10 w-full max-w-sm rounded-md bg-gray-100" />
+          }
+        >
           <Search placeholder="Search invoices..." />
         </Suspense>
         <CreateInvoice />
