@@ -2,5 +2,11 @@
   "cSpell.words": [
     "ILIKE",
     "ossp"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
   ]
 }
