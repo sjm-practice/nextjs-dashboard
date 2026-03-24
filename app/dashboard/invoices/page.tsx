@@ -30,7 +30,9 @@ export default async function Page(props: {
           in development of this tutorial. Perhaps a change later in the tutorial addresses
           this issue.
         */}
-        <Suspense fallback={<div className="h-10 w-full max-w-sm rounded-md bg-gray-100" />}>
+        <Suspense
+          fallback={<div className="h-10 w-full max-w-sm rounded-md bg-gray-100" />}
+        >
           <Search placeholder="Search invoices..." />
         </Suspense>
         <CreateInvoice />

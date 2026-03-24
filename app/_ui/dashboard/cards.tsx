@@ -1,4 +1,9 @@
-import { BanknotesIcon, ClockIcon, UserGroupIcon, InboxIcon } from '@heroicons/react/24/outline';
+import {
+  BanknotesIcon,
+  ClockIcon,
+  UserGroupIcon,
+  InboxIcon,
+} from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/_ui/fonts';
 import { fetchCardData } from '@/app/_lib/data';
 
