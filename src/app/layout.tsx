@@ -1,5 +1,5 @@
-import '@/app/_ui/global.css';
-import { inter } from '@/app/_ui/fonts';
+import '@/_ui/global.css';
+import { inter } from '@/_ui/fonts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

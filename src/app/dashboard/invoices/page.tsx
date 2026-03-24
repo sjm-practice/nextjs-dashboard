@@ -1,11 +1,11 @@
-import Pagination from '@/app/_ui/invoices/pagination';
-import Search from '@/app/_ui/search';
-import Table from '@/app/_ui/invoices/table';
-import { CreateInvoice } from '@/app/_ui/invoices/buttons';
-import { lusitana } from '@/app/_ui/fonts';
-import { InvoicesTableSkeleton } from '@/app/_ui/skeletons';
+import Pagination from '@/_ui/invoices/pagination';
+import Search from '@/_ui/search';
+import Table from '@/_ui/invoices/table';
+import { CreateInvoice } from '@/_ui/invoices/buttons';
+import { lusitana } from '@/_ui/fonts';
+import { InvoicesTableSkeleton } from '@/_ui/skeletons';
 import { Suspense } from 'react';
-import { fetchInvoicesPages } from '@/app/_lib/data';
+import { fetchInvoicesPages } from '@/_lib/data';
 
 export default async function Page(props: {
   searchParams?: Promise<{
