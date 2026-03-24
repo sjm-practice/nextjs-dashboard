@@ -22,18 +22,20 @@ This is a Next.js 16 App Router project using React Server Components and direct
 
 ### Directory conventions
 
-- `app/_lib/` — server-only utilities: `data.ts` (all DB queries), `definitions.ts` (TypeScript types), `utils.ts`, `placeholder-data.ts`
-- `app/_ui/` — reusable components, organized by feature (`dashboard/`, `invoices/`, `customers/`)
-- `app/dashboard/` — protected route group; nested routes for invoices and customers
-- `app/seed/route.ts` — one-off GET endpoint that creates tables and seeds the database
+- `src/lib/` — server-only utilities: `data.ts` (all DB queries), `definitions.ts` (TypeScript types), `utils.ts`, `placeholder-data.ts`
+- `src/components/` — reusable components, organized by feature (`dashboard/`, `invoices/`, `customers/`)
+- `src/app/dashboard/` — protected route group; nested routes for invoices and customers
+- `src/app/seed/route.ts` — one-off GET endpoint that creates tables and seeds the database
+
+The `@/*` path alias resolves to `src/*` (configured in `tsconfig.json`), so imports use `@/lib/` and `@/components/`.
 
 ### Data fetching
 
-All database queries live in `app/_lib/data.ts` as async functions using the `postgres` SQL client with parameterized queries. Pages call these functions directly (they are Server Components). There is no API layer for reads — data flows from DB → server component → rendered HTML.
+All database queries live in `src/lib/data.ts` as async functions using the `postgres` SQL client with parameterized queries. Pages call these functions directly (they are Server Components). There is no API layer for reads — data flows from DB → server component → rendered HTML.
 
 ### Client vs. server components
 
-Interactive UI (search, pagination) uses `'use client'` with `useRouter`/`useSearchParams` to manipulate URL search params. Data-fetching components are `async` server components. Loading states use `<Suspense>` with skeleton components from `app/_ui/skeletons.tsx`.
+Interactive UI (search, pagination) uses `'use client'` with `useRouter`/`useSearchParams` to manipulate URL search params. Data-fetching components are `async` server components. Loading states use `<Suspense>` with skeleton components from `src/components/skeletons.tsx`.
 
 ### Auth
 
