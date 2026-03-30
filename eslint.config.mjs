@@ -1,11 +1,13 @@
-import nextConfig from 'eslint-config-next';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
 import prettierConfig from 'eslint-config-prettier';
 
-const eslintConfig = [
-  ...nextConfig,
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
   // General rules (no type information required)
   {
-    plugins: nextConfig[1].plugins,
+    plugins: nextVitals[1].plugins,
     rules: {
       '@typescript-eslint/no-unused-vars': 'error',
       'prefer-const': 'error',
@@ -18,11 +20,11 @@ const eslintConfig = [
   // Type-aware rules (requires TypeScript project info)
   {
     files: ['**/*.ts', '**/*.tsx'],
-    plugins: nextConfig[1].plugins,
+    plugins: nextVitals[1].plugins,
     languageOptions: {
-      ...nextConfig[1].languageOptions,
+      ...nextVitals[1].languageOptions,
       parserOptions: {
-        ...nextConfig[1].languageOptions.parserOptions,
+        ...nextVitals[1].languageOptions.parserOptions,
         project: true,
         tsconfigRootDir: import.meta.dirname,
       },
@@ -31,6 +33,6 @@ const eslintConfig = [
       '@typescript-eslint/no-floating-promises': 'error',
     },
   },
-];
+]);
 
 export default eslintConfig;
