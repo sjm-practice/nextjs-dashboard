@@ -36,7 +36,7 @@ export async function createInvoice(formData: FormData) {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to create invoice:', error);
-    return { message: 'Database error: failed to create invoice.' };
+    throw new Error('Database error: failed to create invoice.');
   }
 
   revalidatePath('/dashboard/invoices');
@@ -61,7 +61,7 @@ export async function updateInvoice(id: string, formData: FormData) {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to update invoice:', error);
-    return { message: 'Database error: failed to update invoice.' };
+    throw new Error('Database error: failed to update invoice.');
   }
 
   revalidatePath('/dashboard/invoices');
