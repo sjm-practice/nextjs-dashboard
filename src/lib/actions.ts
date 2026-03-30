@@ -74,7 +74,7 @@ export async function deleteInvoice(id: string) {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to delete invoice:', error);
-    return { message: 'Database error: failed to delete invoice.' };
+    throw new Error('Database error: failed to delete invoice.');
   }
 
   revalidatePath('/dashboard/invoices');
