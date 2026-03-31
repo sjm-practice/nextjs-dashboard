@@ -1,7 +1,8 @@
-import EditInvoiceForm from '@/components/invoices/EditInvoiceForm';
-import Breadcrumbs from '@/components/invoices/Breadcrumbs';
-import { fetchCustomers, fetchInvoiceById } from '@/lib/data';
 import { notFound } from 'next/navigation';
+
+import Breadcrumbs from '@/components/invoices/Breadcrumbs';
+import EditInvoiceForm from '@/components/invoices/EditInvoiceForm';
+import { fetchCustomers, fetchInvoiceById } from '@/lib/data';
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;

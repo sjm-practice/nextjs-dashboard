@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { lusitana } from '@/components/fonts';
 import Search from '@/components/Search';
 import { CustomersTableType, FormattedCustomersTable } from '@/lib/definitions';

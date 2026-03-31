@@ -1,6 +1,7 @@
+import { Suspense } from 'react';
+
 import AcmeLogo from '@/components/AcmeLogo';
 import LoginForm from '@/components/LoginForm';
-import { Suspense } from 'react';
 
 export default function LoginPage() {
   return (
