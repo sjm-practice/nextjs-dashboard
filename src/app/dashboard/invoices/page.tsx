@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Suspense } from 'react';
 
 import { lusitana } from '@/components/fonts';
@@ -7,6 +8,10 @@ import Pagination from '@/components/invoices/Pagination';
 import Search from '@/components/Search';
 import { InvoicesTableSkeleton } from '@/components/Skeletons';
 import { fetchInvoicesPages } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: 'Invoices | Acme Dashboard',
+};
 
 export default async function Page(props: {
   searchParams?: Promise<{
