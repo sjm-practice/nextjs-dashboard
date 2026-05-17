@@ -1,5 +1,8 @@
 {
   "permissions": {
-    "allow": ["Bash(git remote:*)"]
+    "allow": [
+      "Bash(git remote:*)",
+      "Bash(git show-ref *)"
+    ]
   }
 }
